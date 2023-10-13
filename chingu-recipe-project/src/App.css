@@ -1,0 +1,189 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font: 'Bebas Neue', sans-serif;
+  --secondary-font: 'Quicksand', sans-serif;
+  --primary-color: #232931;
+  --secondary-color: #EEEEEE;
+}
+
+body{
+  background-color: var(--secondary-color);
+}
+
+.app{
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  /* background-color: var(--bg-color); */
+}
+
+/* Navbar */
+
+.navbar{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #EEEEEE;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+  /* position: sticky;
+  top: 0; */
+}
+
+.logo{
+  padding: 1.3rem;
+  font-size: 1.7rem;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  letter-spacing: 0.2rem;
+  font-family: var(--primary-font);
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: 1rem;
+}
+
+nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  border: none;
+  font-family: var(--primary-font);
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  display: block;
+  background-color: var(--primary-color);
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  transition: transform 200ms ease-in 50ms;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  padding: 1.55rem;
+}
+
+nav a:hover{
+  color: #7de3c1;
+}
+
+
+/* Searchbar */
+
+.search-bar{
+  width: 45rem;
+  margin: 7rem auto 3rem;
+  /* border: 2px solid black; */
+  padding: 1rem;
+}
+
+form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input{
+  padding: 1rem;
+  width: 30rem;
+  border: none;
+  border: 2px solid var(--primary-color);;
+  border-radius: 1rem;
+  font-family: var(--secondary-font);
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  outline: none ;
+  /* outline: 2px solid black; */
+}
+
+
+button{
+  padding: 1rem;
+  letter-spacing: 0.2rem;
+  border: 2px solid var(--primary-color);;
+  color: var(--primary-color);;
+  background-color: white;
+  border-radius: 1rem;
+  outline: none;
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: var(--primary-color);;
+  color: white;
+  border: 2px solid transparent;
+}
+
+/* recipe-list */
+
+.recipe-list{
+  /* border: 2px solid black; */
+  width: 95vw;
+  height: auto;
+  margin: 2rem auto;
+  padding: 1rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.recipe-card{
+  width: 18rem;
+  min-height: 25rem;
+  margin: 2rem 2.5rem;
+  border-radius: 0.5rem;
+  /* border: 2px solid black; */
+  box-shadow: 1px 1px 10px 5px rgb(0,0,0,0.1);
+  background-color: #F1F3F8;
+  color: var(--primary-color);
+}
+
+.recipe-image{
+  width: 18rem;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.recipe-label{
+  font-family: var(--primary-font);
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+.recipe-cuisineType{
+  font-family: var(--secondary-font);
+  letter-spacing: 0.1rem;
+  padding: 0rem 0.5rem 0.5rem;
+}
+
+/* footer */
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 2rem;
+  text-align: center;
+  background-color: black;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.footer p{
+  color: var(--secondary-color);
+}
+
+.footer p a{
+  color: #4ECCA3;
+  text-decoration: none;
+}
