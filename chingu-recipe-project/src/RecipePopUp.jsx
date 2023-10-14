@@ -1,6 +1,8 @@
 import {v4 as uuidv4}  from 'uuid';
 import {FaAngleDoubleRight} from 'react-icons/fa';
 import {RxCross1} from 'react-icons/rx'
+import './App.css'
+
 
 
 function RecipePopUp({data ,closeRecipePopUp}) {

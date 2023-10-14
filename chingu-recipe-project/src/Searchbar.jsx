@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import RecipeList from './RecipeList';
+import './App.css'
+
 function Searchbar() {
 
     const api_id = '50c0683d';

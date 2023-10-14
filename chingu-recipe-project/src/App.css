@@ -47,21 +47,27 @@ body{
   top: 1rem;
 }
 
+nav{
+  width: fit-content;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  display: flex;
+  border: 2px solid black;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  font-family: var(--primary-font);
+}
+
+
 nav a {
   color: var(--secondary-color);
   text-decoration: none;
   border: none;
-  font-family: var(--primary-font);
   font-size: 1.3rem;
   letter-spacing: 0.1rem;
-  display: block;
-  background-color: var(--primary-color);
-  position: absolute;
-  right: 0;
-  top: 1rem;
-  transition: transform 200ms ease-in 50ms;
-  border-radius: 0.5rem 0rem 0rem 0.5rem;
   padding: 1.55rem;
+  cursor: pointer;
 }
 
 nav a:hover{

@@ -2,6 +2,8 @@ import { useState } from "react"
 import RecipeCard from "./RecipeCard"
 import {v4 as uuidv4 } from 'uuid'
 import RecipePopUp from "./RecipePopUp"
+import './App.css'
+
 
 function RecipeList({data}) {
 
