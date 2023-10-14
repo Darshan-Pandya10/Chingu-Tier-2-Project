@@ -1,23 +1,44 @@
+import { useState } from "react"
 import RecipeCard from "./RecipeCard"
+import {v4 as uuidv4 } from 'uuid'
+import RecipePopUp from "./RecipePopUp"
 
-function RecipeList({data , ingredient}) {
+function RecipeList({data}) {
 
     const {hits} = data
-    // const date = new Date()
-    console.log(hits)
-   
+
+    const [isPopUpVisible,setIsPopUpVisible] = useState(false)
+
+    const [popUpData,setPopUpData] = useState(null)
+
+    function getRecipe(recipe){
+        console.log(recipe)
+        setIsPopUpVisible(true)
+        setPopUpData(recipe)
+    }   
+
+    function closeRecipePopUp() {
+      setIsPopUpVisible(false)
+  }
+
     return (
     <div className="recipe-list" key={data.index}>
     {hits ?
       hits.map(hit => {
+        const id = uuidv4()
         const {recipe} = hit;
-        // console.log(recipe.label)
-        // return <h1 key={date.getSeconds()}>recipe card</h1>
-        return <RecipeCard recipe={recipe} key={recipe.label} />
+        return <RecipeCard recipe={recipe}
+         key={id}
+         id={id} 
+         getRecipe={getRecipe}
+         closeRecipePopUp={closeRecipePopUp}  />
       }) 
       : 
       <h1>There is an error while fetching !</h1>
     }
+    {isPopUpVisible && <RecipePopUp 
+    data={popUpData}
+    closeRecipePopUp={closeRecipePopUp}/>}
     </div>
   ) 
   

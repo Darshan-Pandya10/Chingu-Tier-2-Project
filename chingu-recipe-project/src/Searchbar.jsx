@@ -23,7 +23,7 @@ function Searchbar() {
         try {
             const response = await fetch(url, options);
             const result = await response.json();
-            console.log(result)
+            // console.log(result)
             setData(result)
         } 
         catch (error) {
@@ -58,17 +58,14 @@ function Searchbar() {
       <form>
         <input type="text" name='ingridient' placeholder="Search By Ingrediet" value={ingredient}
         onChange={(e) => setIngredient(e.target.value)} />
-        <button onClick={handleSearch}>Search</button>
+        <button className='search-btn' onClick={handleSearch}>Search</button>
       </form>
     </div>
 
     {/* if there is a data then only show recipelist */}
-    { data && <RecipeList data={data} ingredient={ingredient}/>}
+    { data && <RecipeList data={data}/>}
     </>
   )
 }
 
 export default Searchbar
-
-//   
-//              
