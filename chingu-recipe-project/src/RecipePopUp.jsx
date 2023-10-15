@@ -74,7 +74,7 @@ function RecipePopUp({data ,closeRecipePopUp}) {
       {
         url ? 
         <div className='group url'>
-        <a target='_blank' href={url}>Click for More!</a>
+        <a target='_blank' href={url}>Recipe Link</a>
         </div>
         :
         <div className='group url'>

@@ -25,7 +25,7 @@ function RecipeList({data}) {
 
     return (
     <div className="recipe-list" key={data.index}>
-    {hits ?
+    {hits.length > 0 ?
       hits.map(hit => {
         const id = uuidv4()
         const {recipe} = hit;
@@ -36,7 +36,9 @@ function RecipeList({data}) {
          closeRecipePopUp={closeRecipePopUp}  />
       }) 
       : 
-      <h1>There is an error while fetching !</h1>
+      <div className="recipe-list">
+        <h3>Recipes not Found.</h3>
+      </div>
     }
     {isPopUpVisible && <RecipePopUp 
     data={popUpData}
