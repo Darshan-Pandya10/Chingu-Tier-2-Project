@@ -29,6 +29,9 @@ body{
   border-radius: 0rem 0.5rem 0.5rem 0rem;
   font-family: var(--primary-font);
   background-color: var(--primary-color);
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  padding: 1.5rem;
 
 }
 
@@ -85,8 +88,121 @@ nav a:first-child{
 
 /* Searchbar */
 
+form{
+  border-radius: 0.5rem;
+}
+
 .search-bar{
   width: 50vw;
+}
+
+/* media query for search-bar */
+
+@media only screen and (max-width:860px) {
+
+  .search-bar {
+    width: 70vw;
+  }
+
+  form {
+      border-radius: 0.5rem;
+  }
+
+  .navbar{
+    height: 6rem;
+  }
+
+  .logo{
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    padding: 1.2rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+}
+
+@media only screen and (max-width:720px)  {
+
+  .search-bar{
+    width: 70vw;
+  }
+
+  form {
+    border-radius: 0.5rem;
+  }
+
+  .QnACard {
+    border-radius: 0.5rem;
+  }
+
+  
+}
+
+@media only screen and (max-width:520px) {
+
+  .search-bar {
+    width: 85vw;
+  }
+
+  input{
+    font-size: 0.75rem;
+    letter-spacing: 0.05rem;
+  }
+
+  form {
+    border-radius: 0.5rem;
+  }
+
+  .recipe-card{
+    margin: 1.5rem 1rem;
+  }
+
+  .logo{
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    padding: 1.1rem;
+  }
+
+  nav a{
+      font-size: 1rem;
+      padding: 0.75rem;
+  }
+
+  .heading{
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .description{
+    margin-bottom: 1.5rem;
+  }
+
+  .QnACard{
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .question-btn-div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+
+  .question{
+    font-size: 1.3rem;
+  }
+
+
+
+
+
+
 }
 
 .search-bar input{

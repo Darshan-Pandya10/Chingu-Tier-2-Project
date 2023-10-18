@@ -58,7 +58,7 @@ function Searchbar() {
   return (
     <>
     <div className='search-bar mt-0 mx-auto mb-12'>
-      <form className='flex items-center justify-center my-o mx-auto bg-white pl-2 pr-0 py-o sm:rounded-lg'>
+      <form className='flex items-center justify-center my-o mx-auto bg-white pl-2 pr-0 py-o'>
         <input className='w-[92.3%] p-2 bg-white text-[1.2rem] sm:tracking-widest cursor-pointer' type="text" name='ingridient' placeholder="Search by ingrediet" value={ingredient}
         onChange={(e) => setIngredient(e.target.value)} />
         <button className='search-btn p-4 border-none outline-none
