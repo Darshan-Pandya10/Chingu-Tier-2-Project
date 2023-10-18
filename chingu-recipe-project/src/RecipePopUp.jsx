@@ -11,19 +11,18 @@ function RecipePopUp({data ,closeRecipePopUp}) {
     const {label , mealType , ingredients , totalNutrients , url} = data;
     const nutrientArray = Object.values(totalNutrients)
     return (
-    <div className="recipe-pop-up">
-        <button onClick={() => closeRecipePopUp()} className='exit-btn'>
+    <div className="recipe-pop-up w-[50vw] h-auto absolute top-28 bg-black text-white p-6 sm:rounded-lg ">
+        <button onClick={() => closeRecipePopUp()} className='exit-btn text-white text-2xl absolute right-6 top-6 bg-transparent border-none outline-none cursor-pointer'>
         <RxCross1/>
         </button>
-      <h2>{label}</h2>
+      <h2 className='m-4 text-2xl'>{label}</h2>
 
       {/* check if mealType is present in the response or not. */}
       {mealType ? 
       <div className="group mealType">
-        {/* <h3><FaAngleDoubleRight/>Meal Type : </h3> */}
       {mealType.map((type) => {
             const id = uuidv4();
-            return <p key={id}>{type}</p>
+            return <p className='border-none w-fit sm:tracking-widest' key={id}>{type}</p>
         })}
       </div>
       :
@@ -56,10 +55,10 @@ function RecipePopUp({data ,closeRecipePopUp}) {
         <div>
         <h3><FaAngleDoubleRight/>Nutrients</h3>
         </div>
-        <div className="nutrient-flex">
+        <div className="nutrient-flex flex flex-wrap py-0 px-[0.3rem]">
             {nutrientArray.map((nutrient) => {
             const id = uuidv4();
-            return <p className='nutrient' key={id}>{nutrient.label}</p>
+            return <p className='nutrient p-[0.2rem]' key={id}>{nutrient.label}</p>
         })}
         </div>
         
@@ -74,17 +73,14 @@ function RecipePopUp({data ,closeRecipePopUp}) {
       {
         url ? 
         <div className='group url'>
-        <a target='_blank' href={url}>Recipe Link</a>
+        <a className='p-4 sm:tracking-widest my-0 mx-2 inline-block' target='_blank' href={url}>Recipe Link</a>
         </div>
         :
         <div className='group url'>
         <p>no url found.</p>
         </div>
       }
-    
-
-
-      
+  
     </div>
   )
     }

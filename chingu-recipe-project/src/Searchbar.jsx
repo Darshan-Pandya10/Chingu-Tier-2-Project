@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import RecipeList from './RecipeList';
 import './App.css'
+import {BiSolidSearch} from 'react-icons/bi'
 
 function Searchbar() {
 
@@ -56,11 +57,14 @@ function Searchbar() {
 
   return (
     <>
-    <div className='search-bar'>
-      <form>
-        <input type="text" name='ingridient' placeholder="Search By Ingrediet" value={ingredient}
+    <div className='search-bar mt-0 mx-auto mb-12'>
+      <form className='flex items-center justify-center my-o mx-auto bg-white pl-2 pr-0 py-o sm:rounded-lg'>
+        <input className='w-[92.3%] p-2 bg-white text-[1.2rem] sm:tracking-widest cursor-pointer' type="text" name='ingridient' placeholder="Search by ingrediet" value={ingredient}
         onChange={(e) => setIngredient(e.target.value)} />
-        <button className='search-btn' onClick={handleSearch}>Search</button>
+        <button className='search-btn p-4 border-none outline-none
+        curson-pointer  ' onClick={handleSearch}>
+          <BiSolidSearch size={26}/>
+        </button>
       </form>
     </div>
 

@@ -24,7 +24,7 @@ function RecipeList({data}) {
   }
 
     return (
-    <div className="recipe-list" key={data.index}>
+    <div className="recipe-list flex flex-wrap items-center justify-around  w-[95vw] h-auto my-8 mx-auto p-4 pb-16 " key={data.index}>
     {hits.length > 0 ?
       hits.map(hit => {
         const id = uuidv4()
@@ -37,7 +37,7 @@ function RecipeList({data}) {
       }) 
       : 
       <div className="recipe-list">
-        <h3>Recipes not Found.</h3>
+        <h3 className="text-lg sm:tracking-widest">Recipes not Found.</h3>
       </div>
     }
     {isPopUpVisible && <RecipePopUp 

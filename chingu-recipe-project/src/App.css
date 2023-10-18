@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
   margin: 0;
   padding: 0;
@@ -17,50 +21,22 @@ body{
   background-color: var(--secondary-color);
   width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.app{
-  width: 100vw;
-  min-height: 100vh;
-  position: relative;
 }
 
 /* Navbar */
 
-.navbar{
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #EEEEEE;
-  padding: 0.5rem 2rem;
-}
-
 .logo{
-  padding: 1.3rem;  
-  font-size: 1.7rem;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
-  letter-spacing: 0.2rem;
   font-family: var(--primary-font);
   background-color: var(--primary-color);
-  position: absolute;
-  left: 0;
-  top: 1rem;
+
 }
 
 nav{
-  width: fit-content;
-  position: absolute;
-  top: 1rem;
-  right: 0;
-  display: flex;
-  /* border: 2px solid black; */
   background-color: var(--primary-color);
   border-radius: 0.5rem 0rem 0rem 0.5rem;
   font-family: var(--primary-font);
 }
-
 
 nav a {
   color: var(--secondary-color);
@@ -68,7 +44,7 @@ nav a {
   border: none;
   font-size: 1.3rem;
   letter-spacing: 0.1rem;
-  padding: 1rem;
+  padding: 0.75rem;
   cursor: pointer;
 }
 
@@ -78,203 +54,88 @@ nav a:first-child{
 
 /* home & about */
 
-main{
-  /* border: 2px solid black; */
-  margin-top: 8rem;
-}
-
 .active{
   color: var(--hover-color);
 }
 
-.about{
-  padding: 1rem 2rem;
-}
-
 .about .heading{
   font-family: var(--primary-font);
-  letter-spacing: 0.2rem;
-  margin-bottom: -0.5rem;
-  font-size: 2.5rem;
 }
 
 .about .description{
   font-family: var(--secondary-font);
-  font-size: 1.2rem;
-}
-
-.QnACard{
-  border: 2px solid black;
-  padding: 1rem;
-  margin: 1.5rem 1rem;
-  width: fit-content;
-  border-radius: 0.5rem;
 }
 
 .QnACard:hover{
   border: 2px solid var(--hover-color);
 }
 
-.QnACard h3{
+.question{
   font-family: var(--primary-font);
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
   color: #3f3f3f;
 }
 
 .QnACard p{
   font-family: var(--secondary-font);
-  letter-spacing: 0.05rem;
-}
-
-.question-btn-div {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.question-btn-div button{
-  padding: 0.3rem;
-  margin: 0rem 0.5rem;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 1.1rem;
 }
 
 .QnACard:hover .question-btn-div button {
   color: var(--hover-color);
 }
 
-
 /* Searchbar */
 
 .search-bar{
-  width: 45rem;
-  margin: 0rem auto 3rem;
-  /* border: 2px solid black; */
-  padding: 1rem;
+  width: 50vw;
 }
 
-form{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-input{
-  padding: 1rem;
-  width: 30rem;
-  border: none;
-  border: 2px solid var(--primary-color);;
-  border-radius: 1rem;
+.search-bar input{
   font-family: var(--secondary-font);
-  letter-spacing: 0.1rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-  outline: none ;
-  /* outline: 2px solid black; */
+  outline: none !important;
 }
 
 
 .search-btn{
-  padding: 1rem;
-  letter-spacing: 0.2rem;
-  border: 2px solid var(--primary-color);;
-  color: var(--primary-color);;
-  background-color: white;
-  border-radius: 1rem;
-  outline: none;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
   font-family: var(--primary-font);
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.search-btn:hover{
-  background-color: var(--primary-color);;
-  color: white;
-  border: 2px solid transparent;
+  border-radius: 20%;
 }
 
 /* recipe-list */
 
-.recipe-list{
-  /* border: 2px solid black; */
-  width: 95vw;
-  height: auto;
-  margin: 2rem auto;
-  padding: 1rem;
-  padding-bottom: 4rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-
 .recipe-card{
-  width: 18rem;
-  min-height: 25rem;
-  margin: 2rem 2.5rem;
-  border-radius: 0.5rem;
-  /* border: 2px solid black; */
   box-shadow: 1px 1px 10px 5px rgb(0,0,0,0.1);
   background-color: #F1F3F8;
   color: var(--primary-color);
-  padding-bottom: 0.5rem;
 }
 
 /* recipe-list (on error stage) */
 
 .recipe-list h3{
     font-family: var(--secondary-font);
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
     color: #3f3f3f;
 }
 
 .recipe-image{
-  width: 18rem;
   border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
 .recipe-card a{
-  color:black;
   text-decoration: none;
   font-family: var(--secondary-font);
-  letter-spacing: 0.1rem;
-  margin: 0rem 0.5rem;
 }
 
 .recipe-label{
   font-family: var(--primary-font);
-  letter-spacing: 0.1rem;
-  font-size: 1.3rem;
-  padding: 0.5rem 0.5rem 0rem 0.5rem;
 }
 
 .recipe-cuisineType{
   font-family: var(--secondary-font);
-  letter-spacing: 0.1rem;
-  padding: 0rem 0.5rem 0rem;
-  text-transform: capitalize;
 }
 
 .card-button{
-  padding: 0.5rem 0rem;
-  display: flex;
-  align-items: center;
-  width: 8rem;
-  justify-content: space-around;
-  border: 2px solid transparent;
   color: #232931;
-  font-size: 1rem;
-  background-color: #EEEEEE;
-  background-color: transparent;
-  cursor: pointer;
-  margin: 0rem 0.5rem 0.5rem;
   font-family: var(--secondary-font);
 }
 
@@ -289,15 +150,7 @@ input{
 /* footer */
 
 .footer{
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  padding: 2rem;
-  text-align: center;
-  background-color: black;
   font-family: var(--secondary-font);
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
 }
 
 .footer p{
@@ -311,22 +164,9 @@ input{
 
 /* recipe-pop-up */
 
-.recipe-pop-up{
-  width: 40vw;
-  height: auto;
-  border: 2px solid black;
-  position: absolute;
-  top: 7rem;
-  background-color: black;
-  color: white;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-}
-
 .recipe-pop-up h2{
   font-family: var(--primary-font);
   letter-spacing: 0.2rem;
-  margin: 1rem;
 }
 
 .recipe-pop-up h3{
@@ -337,7 +177,8 @@ input{
   letter-spacing: 0.1rem;
   margin: 0.5rem 0rem;
   font-family: var(--secondary-font);
-  /* border: 1px solid #4ECCA3; */
+  color: var(--hover-color);
+  font-size: 1.2rem;
 }
 
 .recipe-pop-up .group{
@@ -357,44 +198,14 @@ input{
 }
 
 .recipe-pop-up .mealType p{
-  padding: 1rem;
   background-color: #232931;
   color: var(--hover-color);
-  margin: 1rem;
-  border: none;
-  width: fit-content;
-  letter-spacing: 0.1rem;
-}
-
-.recipe-pop-up .nutrient-flex{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0rem 0.3rem;
-} 
-
-.recipe-pop-up .nutrient-flex p{
-    padding: 0.2rem;
+  padding: 1rem;
 }
 
 .recipe-pop-up a{
     font-family: var(--secondary-font);
-    padding: 1rem;
-    letter-spacing: 0.1rem;
     color: var(--hover-color);
     text-decoration: none;
     background-color: #232931;
-    margin: 0rem 0.5rem;
-    display: inline-block;
-}
-
-.recipe-pop-up .exit-btn{
-  color: white;
-  font-size: 1.5rem;
-  position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
 }
