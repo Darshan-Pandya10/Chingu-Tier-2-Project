@@ -5,15 +5,12 @@ import {BiSolidSearch} from 'react-icons/bi'
 
 function Searchbar() {
 
-    const api_id = '50c0683d';
-    const api_key = 'cbbd8bf8c49fc90fca3e05462a8d77f4'
-
     const [ingredient,setIngredient] = useState('');
     let [searchClicked , setSearchClicked] = useState(false);
     const [data,setData] = useState(false);
     const isMounted = useRef(false);
 
-  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient}&app_id=${api_id}&app_key=${api_key}`;
+  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient}&app_id=${process.env.VITE_EDAMAM_API_ID}&app_key=${process.env.VITE_EDAMAM_API_KEY}`;
   const options = {
 	method: 'GET',
 	headers: {
