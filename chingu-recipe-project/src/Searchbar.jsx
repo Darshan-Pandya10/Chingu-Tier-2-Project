@@ -10,7 +10,7 @@ function Searchbar() {
     const [data,setData] = useState(false);
     const isMounted = useRef(false);
 
-  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient}&app_id=${process.env.VITE_EDAMAM_API_ID}&app_key=${process.env.VITE_EDAMAM_API_KEY}`;
+  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient}&app_id=${import.meta.env.VITE_EDAMAM_API_ID}&app_key=${import.meta.env.VITE_EDAMAM_API_KEY}`;
   const options = {
 	method: 'GET',
 	headers: {
