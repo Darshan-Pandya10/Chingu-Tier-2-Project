@@ -11,7 +11,7 @@ function RecipePopUp({data ,closeRecipePopUp}) {
     const {label , mealType , ingredients , totalNutrients , url} = data;
     const nutrientArray = Object.values(totalNutrients)
     return (
-    <div className="recipe-pop-up w-[50vw] h-auto absolute top-28 bg-black text-white p-6 sm:rounded-lg ">
+    <div className="recipe-pop-up w-[50vw] h-auto absolute top-28 bg-black text-white p-6 rounded-lg ">
         <button onClick={() => closeRecipePopUp()} className='exit-btn text-white text-2xl absolute right-6 top-6 bg-transparent border-none outline-none cursor-pointer'>
         <RxCross1/>
         </button>
@@ -22,12 +22,12 @@ function RecipePopUp({data ,closeRecipePopUp}) {
       <div className="group mealType">
       {mealType.map((type) => {
             const id = uuidv4();
-            return <p className='border-none w-fit sm:tracking-widest' key={id}>{type}</p>
+            return <p className='border-none w-fit tracking-widest' key={id}>{type}</p>
         })}
       </div>
       :
       <div className="group mealType">
-        <h3><FaAngleDoubleRight/>Meal Type</h3>
+        <h3 className='topic'><FaAngleDoubleRight/>Meal Type</h3>
       <p>no mealType found.</p>
       </div>
       }
@@ -36,7 +36,7 @@ function RecipePopUp({data ,closeRecipePopUp}) {
       {ingredients ? 
       
       <div className="group ingredients">
-        <h3><FaAngleDoubleRight/>Ingredients</h3>
+        <h3 className='topic'><FaAngleDoubleRight/>Ingredients</h3>
       {ingredients.map((ingredient) => {
             const id = uuidv4();
             return <p key={id}>{ingredient.text}</p>
@@ -44,7 +44,7 @@ function RecipePopUp({data ,closeRecipePopUp}) {
       </div>
       :
       <div className="group ingredients">
-        <h3><FaAngleDoubleRight/>Ingredients</h3>
+        <h3 className='topic'><FaAngleDoubleRight/>Ingredients</h3>
       <p>no ingredients found.</p>
       </div>
       }
@@ -53,7 +53,7 @@ function RecipePopUp({data ,closeRecipePopUp}) {
       {totalNutrients ? 
       <div className="group Nutrients">
         <div>
-        <h3><FaAngleDoubleRight/>Nutrients</h3>
+        <h3 className='topic'><FaAngleDoubleRight/>Nutrients</h3>
         </div>
         <div className="nutrient-flex flex flex-wrap py-0 px-[0.3rem]">
             {nutrientArray.map((nutrient) => {
@@ -65,7 +65,7 @@ function RecipePopUp({data ,closeRecipePopUp}) {
       </div>
       :
       <div className="group Nutrients">
-        <h3><FaAngleDoubleRight/>Nutrients</h3>
+        <h3 className='topic'><FaAngleDoubleRight/>Nutrients</h3>
         <p>no totalNutrients found.</p>
       </div>
       }
@@ -73,7 +73,7 @@ function RecipePopUp({data ,closeRecipePopUp}) {
       {
         url ? 
         <div className='group url'>
-        <a className='p-4 sm:tracking-widest my-0 mx-2 inline-block' target='_blank' href={url}>Recipe Link</a>
+        <a className='p-4 tracking-widest my-0 mx-2 inline-block' target='_blank' href={url}>Recipe Link</a>
         </div>
         :
         <div className='group url'>

@@ -21,6 +21,7 @@ body{
   background-color: var(--secondary-color);
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -96,7 +97,33 @@ form{
   width: 50vw;
 }
 
+.sorting-menu{
+  font-family: var(--primary-font);
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+}
+
+.dropdown{
+  background-color: rgb(212, 212, 212);
+  width: 9rem;
+  letter-spacing: 0.2rem;
+}
+
+/* sortingMenu */
+
+
+
 /* media query for search-bar */
+
+@media only screen and (max-width:1020px) {
+
+  .recipe-pop-up {
+      width: 70vw;
+      border-radius: 0.5rem;
+    }
+
+}
+
 
 @media only screen and (max-width:860px) {
 
@@ -122,6 +149,22 @@ form{
     font-size: 1rem;
     padding: 0.75rem;
   }
+
+  .recipe-pop-up{
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .recipe-pop-up h2{
+    font-size: 1.3rem;
+  }
+
+  .recipe-pop-up .topic{
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+  }
+
+
 
 }
 
@@ -197,11 +240,6 @@ form{
   .question{
     font-size: 1.3rem;
   }
-
-
-
-
-
 
 }
 
@@ -325,3 +363,47 @@ form{
     text-decoration: none;
     background-color: #232931;
 }
+
+/* pagination */
+
+.list-and-pagination{
+  width: 95vw;
+  margin: 0px auto;
+  height: auto;
+  margin-bottom: 10rem;
+}
+
+.paginationBtns{
+  color: #F1F3F8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0px auto;
+  font-size: 1.1rem;
+  font-family: var(--primary-font);
+  background-color: #232931;
+}
+
+.paginationBtns li{
+  letter-spacing: 0.1rem;
+  border: none;
+}
+
+.paginationBtns li a{
+    cursor: pointer;
+    display: block;
+    padding: 0.75rem 1.2rem;
+}
+
+.paginationBtns li a:hover{
+  background-color: #F1F3F8;
+  color: black;
+}
+
+.paginationActive a{
+    background-color: var(--hover-color);
+    color: black;
+}
+

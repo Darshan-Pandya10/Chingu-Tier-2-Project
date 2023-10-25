@@ -4,6 +4,9 @@ import Home from './Home'
 import About from './About'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
+
+  
+
   return (
     <div className='app w-full h-auto relative'>
     <BrowserRouter>
