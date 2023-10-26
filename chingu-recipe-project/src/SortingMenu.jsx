@@ -16,9 +16,8 @@ const SortingMenu = ({data}) => {
         <option value="">None</option>
         <option value="breakfast">Breakfast</option>
         <option value="brunch">Brunch</option>
-        <option value="lunch">Lunch</option>
+        <option value="lunch/dinner">Lunch / Dinner</option>
         <option value="teatime">Teatime</option>
-        <option value="dinner">Dinner</option>
 
       </select> 
     </div>
