@@ -9,7 +9,7 @@
 }
 
 :root { 
-  --primary-font: 'Kenia', sans-serif;
+  --primary-font: 'Nosifer',sans-serif;
   --secondary-font: 'Space Grotesk', sans-serif;
 }
 
@@ -44,36 +44,34 @@
 }
 
 .logo{
-  border-radius: 0rem 0.5rem 0.5rem 0rem;
   font-family: var(--primary-font);
-  font-size: 2rem;
+  font-size: 1.1rem;
   letter-spacing: 0.05rem;
   padding: 0.5rem;
   color: var(--secondary-color);
 }
 
 nav{
-  border-radius: 0.5rem 0rem 0rem 0.5rem;
   font-family: var(--primary-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-nav a {
+nav a , nav button {
   text-decoration: none;
   border: none;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   letter-spacing: 0.1rem;
-  padding: 0.75rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
-nav button{
-    text-decoration: none;
-    border: none;
-    font-size: 1.3rem;
-    letter-spacing: 0.1rem;
-    padding: 0.75rem;
-    cursor: pointer;
-}
+ nav button {
+   font-size: 1.7rem;
+   color: var(--hover-color);
+ }
+
 
 
 /* home & about */
@@ -294,9 +292,9 @@ form{
 
 /* recipe-list (on error stage) */
 
-.recipe-list h3{
+.error{
     font-family: var(--secondary-font);
-    color: #3f3f3f;
+    color: var(--primary-color);
 }
 
 .recipe-image{

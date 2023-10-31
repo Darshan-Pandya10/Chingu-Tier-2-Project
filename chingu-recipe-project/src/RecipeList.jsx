@@ -41,25 +41,27 @@ function RecipeList({ data, selectedValue }) {
   return (
     <div className="list-and-pagination">
       <div className="recipe-list  w-[85vw] flex flex-wrap items-center justify-around h-auto my-8 mx-auto">
-        {displayRecipes.length > 0 ? (
-          displayRecipes.map(eachRecipeObj => {
-            const id = uuidv4();
-            const { recipe } = eachRecipeObj;
-            return (
-              <RecipeCard
-                recipe={recipe}
-                key={id}
-                id={id}
-                getRecipe={getRecipe}
-                closeRecipePopUp={closeRecipePopUp}
-              />
-            );
-          })
+
+          {displayRecipes.length > 0 ? (
+        displayRecipes.map(eachRecipeObj => {
+          const id = uuidv4();
+          const { recipe } = eachRecipeObj;
+          return (
+            <RecipeCard
+              recipe={recipe}
+              key={id}
+              id={id}
+              getRecipe={getRecipe}
+              closeRecipePopUp={closeRecipePopUp}
+            />
+          );
+        })
         ) : (
           <div className="recipe-list">
-            <h3 className="text-lg tracking-widest">Recipes not Found.</h3>
+            <h3 className="error text-lg tracking-widest">Recipes not Found.</h3>
           </div>
         )}
+
 
         {isPopUpVisible && <RecipePopUp
           data={popUpData}
