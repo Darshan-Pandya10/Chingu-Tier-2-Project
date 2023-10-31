@@ -3,12 +3,22 @@ import Navbar from './Navbar'
 import Home from './Home'
 import About from './About'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { createContext, useState } from 'react'
+
+  export const ThemeContext = createContext(null);
+
 function App() {
 
-  
+  const [theme , setTheme] = useState('light')
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
+  }
+
 
   return (
-    <div className='app w-full h-auto relative'>
+    <ThemeContext.Provider value={{theme , toggleTheme}}>
+    <div className='app w-full h-auto relative' id={theme}>
     <BrowserRouter>
     <Navbar/>
      <Routes>
@@ -17,6 +27,7 @@ function App() {
      </Routes>
     </BrowserRouter>
     </div>
+    </ThemeContext.Provider>
   )
 }
 

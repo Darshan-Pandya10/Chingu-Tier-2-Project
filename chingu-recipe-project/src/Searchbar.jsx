@@ -8,7 +8,8 @@ function Searchbar() {
 
     const [ingredient,setIngredient] = useState('');
     let [searchClicked , setSearchClicked] = useState(false); 
-    const [data,setData] = useState(false);
+    const [dataLength , setDataLength] = useState(0)
+    const [data,setData] = useState(false); 
     const isMounted = useRef(false);
     const api_id = '50c0683d'
     const api_key = 'cbbd8bf8c49fc90fca3e05462a8d77f4'
@@ -27,8 +28,10 @@ function Searchbar() {
         try {
             const response = await fetch(url, options);
             const result = await response.json();
-            // console.log(result)
+            console.log(result)
             setData(result)
+            setDataLength(result.hits.length)
+
         } 
         catch (error) {
 	        console.error(error);
@@ -44,6 +47,7 @@ function Searchbar() {
         fetchData()
         return (
           setIngredient(''),
+          setDataLength(0),
          setSearchClicked(false)
          )
         },[searchClicked])
@@ -53,11 +57,12 @@ function Searchbar() {
         setSearchClicked(true)
     }
 
+
   return (
     <>
     <div className='search-bar mt-0 mx-auto mb-12'>
       <form className='flex items-center justify-center my-o mx-auto bg-white pl-2 pr-0 py-o'>
-        <input className='w-[92.3%] p-2 bg-white text-[1.2rem] tracking-widest cursor-pointer' type="text" name='ingridient' placeholder="Search by ingrediet" value={ingredient}
+        <input className='w-[92.3%] p-2 bg-white text-[1.2rem] tracking-widest cursor-pointer' type="text" name='ingridient' placeholder="Search by ingrediet(s)" value={ingredient}
         onChange={(e) => setIngredient(e.target.value)} />
         <button className='search-btn p-4 border-none outline-none
         curson-pointer  ' onClick={handleSearch}>
@@ -67,7 +72,7 @@ function Searchbar() {
     </div>
 
     {/* if there is a data then only show recipelist */}
-    {data && <SortingMenu data={data}/>}
+    {dataLength >= 1 && <SortingMenu data={data}/>}
     </>
   )
 }

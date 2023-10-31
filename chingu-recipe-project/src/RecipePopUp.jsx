@@ -11,8 +11,8 @@ function RecipePopUp({data ,closeRecipePopUp}) {
     const {label , mealType , ingredients , totalNutrients , url} = data;
     const nutrientArray = Object.values(totalNutrients)
     return (
-    <div className="recipe-pop-up w-[50vw] h-auto absolute top-28 bg-black text-white p-6 rounded-lg ">
-        <button onClick={() => closeRecipePopUp()} className='exit-btn text-white text-2xl absolute right-6 top-6 bg-transparent border-none outline-none cursor-pointer'>
+    <div className="recipe-pop-up w-[50vw] h-auto absolute top-28 p-6 rounded-lg ">
+        <button onClick={() => closeRecipePopUp()} className='exit-btn text-2xl absolute right-6 top-6 bg-transparent border-none outline-none cursor-pointer'>
         <RxCross1/>
         </button>
       <h2 className='m-4 text-2xl'>{label}</h2>
