@@ -402,16 +402,17 @@ form {
 }
 
 .recipe-pop-up .mealType p{
-  background-color: #232931;
+  background-color: #000000;
   color: var(--hover-color);
   padding: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 .recipe-pop-up a{
     font-family: var(--secondary-font);
     color: var(--hover-color);
     text-decoration: none;
-    background-color: #232931;
+    background-color: #000000;
 }
 
 /* pagination */
