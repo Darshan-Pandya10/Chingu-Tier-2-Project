@@ -1,10 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'
-import RecipeList from './RecipeList';
+import React, { useEffect, useRef, useState, useContext } from 'react'
 import './App.css'
+import LightHeroImage from './assets/LightHeroImage.jpeg'
+import DarkHeroImage from './assets/DarkHeroImage.jpeg'
 import {BiSolidSearch} from 'react-icons/bi'
-import SortingMenu from './SortingMenu';
+import SortingMenu from './SortingMenu'
+import { ThemeContext } from './App'
 
 function Searchbar() {
+
+  const themeValue = useContext(ThemeContext);
+  const {theme , toggleTheme} = themeValue;
 
     const [ingredient,setIngredient] = useState('');
     let [searchClicked , setSearchClicked] = useState(false); 
@@ -57,10 +62,27 @@ function Searchbar() {
         setSearchClicked(true)
     }
 
+    const lightThemeBg = {
+      backgroundImage : `url(${LightHeroImage})`,
+      backgroundPosition: `center`,
+      backgroundRepeat: `no-repeat`,
+      backgroundSize: `cover`
+    }
+
+     const darkThemeBg = {
+      backgroundImage : `url(${DarkHeroImage})`,
+      backgroundPosition: `center`,
+      backgroundRepeat: `no-repeat`,
+      backgroundSize: `cover`
+    }
+
 
   return (
     <>
-    <div className='search-bar flex flex-col items-center mt-0 mx-auto mb-12'>
+    <div 
+    className='search-bar flex flex-col items-center mt-0 mx-auto mb-12'
+    style={theme === 'light' ? lightThemeBg : darkThemeBg}
+    >
 
       <div className='intro text-center m-4'>
       <h1 className='heading-intro'>"Hey there! Feeling hungry?</h1>

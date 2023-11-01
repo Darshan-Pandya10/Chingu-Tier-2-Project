@@ -4,7 +4,7 @@ import Footer from './Footer'
 import './App.css'
 function Home() {
   return (
-    <main className="home relative mt-12">
+    <main className="home relative">
       <Searchbar/>
      <RecipePopUp/>
      <Footer/>

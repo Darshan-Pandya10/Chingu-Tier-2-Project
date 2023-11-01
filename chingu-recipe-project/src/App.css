@@ -84,8 +84,8 @@ nav a , nav button {
 /* home */
 
 .intro{
-  margin: 0rem auto 3rem;
-  color: var(--primary-color);
+  margin: -1rem auto 3rem;
+  color: var(--secondary-color);
 }
 
 .heading-intro{
@@ -108,7 +108,9 @@ form {
 }
 
 .search-bar {
-  width: 70vw;
+  width: 100vw;
+  height: 45vh;
+  padding-top: 5rem;
 }
 
 .search-bar input {
@@ -122,7 +124,7 @@ form {
   color: var(--secondary-color);
   background-color: var(--primary-color);
   font-family: var(--primary-font);
-  border-radius: 50%;
+  border-radius: 20%;
 }
 
 .active{
@@ -194,10 +196,6 @@ form {
 
 @media only screen and (max-width:860px) {
 
-  .search-bar {
-    width: 70vw;
-  }
-
   .search-bar input {
     width: 60vw;
   }
@@ -237,10 +235,6 @@ form {
 
 @media only screen and (max-width:720px)  {
 
-  .search-bar{
-    width: 70vw;
-  }
-
   .search-bar input {
     width: 60vw;
   }
@@ -253,10 +247,6 @@ form {
 }
 
 @media only screen and (max-width:520px) {
-
-  .search-bar {
-    width: 100vw;
-  }
 
   .search-bar input {
     width: 70vw;
