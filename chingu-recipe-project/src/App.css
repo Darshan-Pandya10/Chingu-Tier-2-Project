@@ -41,6 +41,9 @@
 
 .navbar{
   color: var(--primary-color);
+  position: relative;
+  padding-top: 1rem;
+  padding-right: 0rem;
 }
 
 .logo{
@@ -73,8 +76,11 @@ nav a , nav button {
 }
 
  nav button {
-   font-size: 1.3rem;
-   color: var(--hover-color);
+  right: 0;
+  background-color: var(--hover-color);
+  font-size: 1.3rem;
+  color: #ffffff;
+  border-radius: 2rem 0rem 0rem 2rem;
  }
 
 

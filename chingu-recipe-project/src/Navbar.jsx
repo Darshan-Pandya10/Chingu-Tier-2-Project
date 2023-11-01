@@ -12,7 +12,7 @@ function Navbar() {
   const {theme , toggleTheme} = themeValue;
 
   return (
-    <div className="navbar w-full h-24 flex justify-between items-center text-white px-2 py-2 ">
+    <div className="navbar w-full h-24 flex justify-between items-center text-white px-2 py-2">
       <h2 className="logo flex items-center justify-around left-0 text-white">
         Foodish Recipes
         <span className="logo-icon ml-1">
