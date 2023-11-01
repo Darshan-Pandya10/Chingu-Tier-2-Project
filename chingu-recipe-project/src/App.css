@@ -9,16 +9,16 @@
 }
 
 :root { 
-  --primary-font: 'Nosifer',sans-serif;
+  --primary-font: 'Sansita Swashed', sans-serif;
   --secondary-font: 'Space Grotesk', sans-serif;
 }
 
 /* theme */
 
 #light{
-  --primary-color: #000000;
+  --primary-color: #232931;
   --secondary-color: #EEEEEE;
-  --hover-color: #7de3c1;
+  --hover-color: #4ECCA3;
 }
 
 #dark {
@@ -39,16 +39,20 @@
 /* Navbar */
 
 .navbar{
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .logo{
   font-family: var(--primary-font);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   letter-spacing: 0.05rem;
   padding: 0.5rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.logo-icon{
+  color: var(--hover-color);
+  font-size: 1.7rem;
 }
 
 nav{
@@ -61,7 +65,7 @@ nav{
 nav a , nav button {
   text-decoration: none;
   border: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
   padding: 0.5rem;
   cursor: pointer;
@@ -76,16 +80,80 @@ nav a , nav button {
 
 /* home & about */
 
+/* home */
+
+.intro{
+  margin: 0rem auto 4rem;
+  color: var(--primary-color);
+}
+
+.heading-intro{
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.sub-heading{
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin-top: 0.25rem;
+}
+
+/* Searchbar */
+
+form {
+  border-radius: 1rem 10rem 10rem 1rem;
+}
+
+.search-bar {
+  width: 70vw;
+}
+
+.search-bar input {
+  font-family: var(--secondary-font);
+  outline: none !important;
+  border-radius: 1rem 10rem 10rem 1rem;
+}
+
+
+.search-btn {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  font-family: var(--primary-font);
+  border-radius: 50%;
+}
+
 .active{
   color: var(--hover-color);
 }
 
+/* sortingMenu */
+
+.sorting-menu {
+  font-family: var(--secondary-font);
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  color: var(--primary-color);
+}
+
+.dropdown {
+  background-color: rgb(212, 212, 212);
+  width: fit-content;
+  letter-spacing: 0.2rem;
+  color: black;
+}
+
+/* about */
+
 .about .heading{
   font-family: var(--primary-font);
+  color: var(--primary-color);
 }
 
 .about .description{
   font-family: var(--secondary-font);
+  color: var(--primary-color);
 }
 
 .QnACard:hover{
@@ -110,32 +178,6 @@ nav a , nav button {
   color: var(--hover-color);
 }
 
-/* Searchbar */
-
-form{
-  border-radius: 0.5rem;
-}
-
-.search-bar{
-  width: 50vw;
-}
-
-.sorting-menu{
-  font-family: var(--secondary-font);
-  font-size: 1.1rem;
-  letter-spacing: 0.2rem;
-  color: var(--primary-color);
-}
-
-.dropdown{
-  background-color: rgb(212, 212, 212);
-  width: fit-content;
-  letter-spacing: 0.2rem;
-  color: black;
-}
-
-/* sortingMenu */
-
 
 /* media query for search-bar */
 
@@ -153,10 +195,6 @@ form{
 
   .search-bar {
     width: 70vw;
-  }
-
-  form {
-      border-radius: 0.5rem;
   }
 
   .navbar{
@@ -198,10 +236,6 @@ form{
     width: 70vw;
   }
 
-  form {
-    border-radius: 0.5rem;
-  }
-
   .QnACard {
     border-radius: 0.5rem;
   }
@@ -212,16 +246,12 @@ form{
 @media only screen and (max-width:520px) {
 
   .search-bar {
-    width: 85vw;
+    width: 100vw;
   }
 
   input{
     font-size: 0.75rem;
     letter-spacing: 0.05rem;
-  }
-
-  form {
-    border-radius: 0.5rem;
   }
 
   .recipe-card{
@@ -267,18 +297,6 @@ form{
 
 }
 
-.search-bar input{
-  font-family: var(--secondary-font);
-  outline: none !important;
-}
-
-
-.search-btn{
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-  font-family: var(--primary-font);
-  border-radius: 20%;
-}
 
 /* recipe-list */
 

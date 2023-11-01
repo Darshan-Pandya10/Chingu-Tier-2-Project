@@ -60,9 +60,16 @@ function Searchbar() {
 
   return (
     <>
-    <div className='search-bar mt-0 mx-auto mb-12'>
-      <form className='flex items-center justify-center my-o mx-auto bg-white pl-2 pr-0 py-o'>
-        <input className='w-[92.3%] p-2 bg-white text-[1.2rem] tracking-widest cursor-pointer' type="text" name='ingridient' placeholder="Search by ingrediet(s)" value={ingredient}
+    <div className='search-bar flex flex-col items-center mt-0 mx-auto mb-12'>
+
+      <div className='intro text-center m-4'>
+      <h1 className='heading-intro'>"Hey there! Feeling hungry?</h1>
+      <h3 className='sub-heading'> You've come to the right place!</h3>
+      
+      </div>
+
+      <form className='flex items-center justify-between my-o mx-auto bg-white pl-2 pr-0 py-o'>
+        <input className='p-2 bg-white text-[1.2rem] tracking-widest cursor-pointer' type="text" name='ingridient' placeholder="Search by ingrediet(s)" value={ingredient}
         onChange={(e) => setIngredient(e.target.value)} />
         <button className='search-btn p-4 border-none outline-none
         curson-pointer  ' onClick={handleSearch}>
