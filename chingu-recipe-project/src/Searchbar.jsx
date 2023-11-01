@@ -66,14 +66,16 @@ function Searchbar() {
       backgroundImage : `url(${LightHeroImage})`,
       backgroundPosition: `center`,
       backgroundRepeat: `no-repeat`,
-      backgroundSize: `cover`
+      backgroundSize: `cover`,
+      opacity:`${0.85}`
     }
 
      const darkThemeBg = {
       backgroundImage : `url(${DarkHeroImage})`,
       backgroundPosition: `center`,
       backgroundRepeat: `no-repeat`,
-      backgroundSize: `cover`
+      backgroundSize: `cover`,
+      opacity:`${0.85}`
     }
 
 
