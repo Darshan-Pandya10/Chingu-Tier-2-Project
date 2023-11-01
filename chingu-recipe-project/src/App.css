@@ -33,6 +33,7 @@
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background-color 150ms ease-in 50ms;
 }
 
 
