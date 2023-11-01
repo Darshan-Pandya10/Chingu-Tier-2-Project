@@ -40,7 +40,7 @@ function RecipeList({ data, selectedValue }) {
 
   return (
     <div className="list-and-pagination">
-      <div className="recipe-list  w-[85vw] flex flex-wrap items-center justify-around h-auto my-8 mx-auto">
+      <div className="recipe-list  w-[85vw] flex flex-wrap items-center justify-around h-auto my-8 mx-auto pt-4">
 
           {displayRecipes.length > 0 ? (
         displayRecipes.map(eachRecipeObj => {

@@ -83,7 +83,7 @@ nav a , nav button {
 /* home */
 
 .intro{
-  margin: 0rem auto 4rem;
+  margin: 0rem auto 3rem;
   color: var(--primary-color);
 }
 
@@ -114,8 +114,8 @@ form {
   font-family: var(--secondary-font);
   outline: none !important;
   border-radius: 1rem 10rem 10rem 1rem;
+  width: 50vw;
 }
-
 
 .search-btn {
   color: var(--secondary-color);
@@ -197,6 +197,10 @@ form {
     width: 70vw;
   }
 
+  .search-bar input {
+    width: 60vw;
+  }
+
   .navbar{
     height: 6rem;
   }
@@ -236,6 +240,10 @@ form {
     width: 70vw;
   }
 
+  .search-bar input {
+    width: 60vw;
+  }
+
   .QnACard {
     border-radius: 0.5rem;
   }
@@ -249,6 +257,10 @@ form {
     width: 100vw;
   }
 
+  .search-bar input {
+    width: 70vw;
+  }
+
   input{
     font-size: 0.75rem;
     letter-spacing: 0.05rem;
@@ -258,15 +270,18 @@ form {
     margin: 1.5rem 1rem;
   }
 
+  .navbar{
+    padding: 0rem;
+  }
   .logo{
     font-size: 1.1rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     padding: 1.1rem;
   }
 
   nav a{
       font-size: 1rem;
-      padding: 0.75rem;
+      padding: 0.5rem;
   }
 
   .heading{
