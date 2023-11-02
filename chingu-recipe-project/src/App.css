@@ -2,33 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root { 
+:root {
   --primary-font: 'Sansita Swashed', sans-serif;
   --secondary-font: 'Space Grotesk', sans-serif;
 }
 
 /* theme */
 
-#light{
+#light {
   --primary-color: #232931;
-  --secondary-color: #EEEEEE;
-  --hover-color: #4ECCA3;
+  --secondary-color: #eeeeee;
+  --hover-color: #4ecca3;
 }
 
 #dark {
   --secondary-color: #000000;
-  --primary-color: #EEEEEE;
+  --primary-color: #eeeeee;
   --hover-color: #7d98e3;
 }
 
-
-.app{
+.app {
   background-color: var(--secondary-color);
   width: 100vw;
   min-height: 100vh;
@@ -36,17 +35,16 @@
   transition: background-color 150ms ease-in 50ms;
 }
 
-
 /* Navbar */
 
-.navbar{
+.navbar {
   color: var(--primary-color);
   position: relative;
   padding: 1rem;
   padding-right: 0rem;
 }
 
-.logo{
+.logo {
   font-family: var(--primary-font);
   font-size: 1.5rem;
   letter-spacing: 0.05rem;
@@ -54,19 +52,20 @@
   color: var(--primary-color);
 }
 
-.logo-icon{
+.logo-icon {
   color: var(--hover-color);
   font-size: 1.7rem;
 }
 
-nav{
+nav {
   font-family: var(--primary-font);
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-nav a , nav button {
+nav a,
+nav button {
   text-decoration: none;
   border: none;
   font-size: 1rem;
@@ -75,32 +74,30 @@ nav a , nav button {
   cursor: pointer;
 }
 
- nav button {
+nav button {
   right: 0;
   background-color: var(--hover-color);
   font-size: 1.3rem;
   color: #ffffff;
   border-radius: 2rem 0rem 0rem 2rem;
- }
-
-
+}
 
 /* home & about */
 
 /* home */
 
-.intro{
+.intro {
   margin: -1rem auto 3rem;
   color: var(--secondary-color);
 }
 
-.heading-intro{
+.heading-intro {
   font-family: var(--primary-font);
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
 }
 
-.sub-heading{
+.sub-heading {
   font-family: var(--secondary-font);
   font-size: 1rem;
   letter-spacing: 0.1rem;
@@ -133,7 +130,7 @@ form {
   border-radius: 20%;
 }
 
-.active{
+.active {
   color: var(--hover-color);
 }
 
@@ -155,31 +152,31 @@ form {
 
 /* about */
 
-.about .heading{
+.about .heading {
   font-family: var(--primary-font);
   color: var(--primary-color);
 }
 
-.about .description{
+.about .description {
   font-family: var(--secondary-font);
   color: var(--primary-color);
 }
 
-.QnACard:hover{
+.QnACard:hover {
   border: 2px solid var(--hover-color);
 }
 
-.question{
+.question {
   font-family: var(--secondary-font);
   color: var(--primary-color);
 }
 
-.QnACard p{
+.QnACard p {
   font-family: var(--secondary-font);
   color: var(--primary-color);
 }
 
-.QnACard button{
+.QnACard button {
   color: var(--primary-color);
 }
 
@@ -187,30 +184,25 @@ form {
   color: var(--hover-color);
 }
 
-
 /* media query for search-bar */
 
-@media only screen and (max-width:1020px) {
-
+@media only screen and (max-width: 1020px) {
   .recipe-pop-up {
-      width: 70vw;
-      border-radius: 0.5rem;
-    }
-
+    width: 70vw;
+    border-radius: 0.5rem;
+  }
 }
 
-
-@media only screen and (max-width:860px) {
-
+@media only screen and (max-width: 860px) {
   .search-bar input {
     width: 60vw;
   }
 
-  .navbar{
+  .navbar {
     height: 6rem;
   }
 
-  .logo{
+  .logo {
     font-size: 1.3rem;
     letter-spacing: 0.2rem;
     padding: 1.2rem;
@@ -221,26 +213,22 @@ form {
     padding: 0.75rem;
   }
 
-  .recipe-pop-up{
+  .recipe-pop-up {
     width: 90vw;
     padding: 1rem;
   }
 
-  .recipe-pop-up h2{
+  .recipe-pop-up h2 {
     font-size: 1.3rem;
   }
 
-  .recipe-pop-up .topic{
+  .recipe-pop-up .topic {
     font-size: 1rem;
     letter-spacing: 0.15rem;
   }
-
-
-
 }
 
-@media only screen and (max-width:720px)  {
-
+@media only screen and (max-width: 720px) {
   .search-bar input {
     width: 60vw;
   }
@@ -248,144 +236,137 @@ form {
   .QnACard {
     border-radius: 0.5rem;
   }
-
-  
 }
 
-@media only screen and (max-width:520px) {
-
+@media only screen and (max-width: 520px) {
   .search-bar input {
     width: 70vw;
   }
 
-  input{
+  input {
     font-size: 0.75rem;
     letter-spacing: 0.05rem;
   }
 
-  .recipe-card{
+  .recipe-card {
     margin: 1.5rem 1rem;
   }
 
-  .navbar{
+  .navbar {
     padding: 0rem;
   }
-  .logo{
+  .logo {
     font-size: 1.1rem;
     letter-spacing: 0.1rem;
     padding: 1.1rem;
   }
 
-  nav a{
-      font-size: 1rem;
-      padding: 0.5rem;
+  nav a {
+    font-size: 1rem;
+    padding: 0.5rem;
   }
 
-  .heading{
+  .heading {
     font-size: 1.7rem;
     letter-spacing: 0.2rem;
   }
 
-  .description{
+  .description {
     margin-bottom: 1.5rem;
   }
 
-  .QnACard{
+  .QnACard {
     padding: 0.5rem;
     margin: 1rem;
     border-radius: 0.5rem;
   }
 
-  .question-btn-div{
+  .question-btn-div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
 
-
-  .question{
+  .question {
     font-size: 1.3rem;
   }
-
 }
-
 
 /* recipe-list */
 
-.recipe-card{
-  box-shadow: 1px 1px 10px 5px rgb(0,0,0,0.1);
-  background-color: #F1F3F8;
+.recipe-card {
+  box-shadow: 1px 1px 10px 5px rgb(0, 0, 0, 0.1);
+  background-color: #f1f3f8;
   color: black;
-    width: 18rem;
+  width: 18rem;
 }
-
 
 /* recipe-list (on error stage) */
 
-.error{
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
+.error {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
 }
 
-.recipe-image{
+.recipe-image {
   border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 
-.recipe-card a{
+.recipe-card a {
   text-decoration: none;
   font-family: var(--secondary-font);
 }
 
-.recipe-label{
+.recipe-label {
   font-size: 1.1rem;
 }
 
-.recipe-cuisineType{
+.recipe-cuisineType {
   font-family: var(--secondary-font);
   letter-spacing: 0.1rem;
 }
 
-.card-button{
+.card-button {
   color: #232931;
   font-family: var(--secondary-font);
 }
 
-.card-button:hover{
-  color: var(--hover-color)
+.card-button:hover {
+  color: var(--hover-color);
 }
 
-.card-button:hover a{
-    color: #4ECCA3;
+.card-button:hover a {
+  color: #4ecca3;
 }
 
 /* footer */
 
-.footer{
+.footer {
   font-family: var(--secondary-font);
 }
 
-.footer p{
+.footer p {
   color: white;
 }
 
-.footer p a{
+.footer p a {
   color: var(--hover-color);
   text-decoration: none;
 }
 
 /* recipe-pop-up */
 
-.recipe-pop-up{
+.recipe-pop-up {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
-.recipe-pop-up h2{
+.recipe-pop-up h2 {
   font-family: var(--primary-font);
   letter-spacing: 0.2rem;
 }
 
-.recipe-pop-up h3{
+.recipe-pop-up h3 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -397,11 +378,11 @@ form {
   font-size: 1.2rem;
 }
 
-.recipe-pop-up .group{
+.recipe-pop-up .group {
   margin: 1.5rem;
 }
 
-.recipe-pop-up p{
+.recipe-pop-up p {
   font-family: var(--secondary-font);
   margin: 0.3rem;
   text-transform: capitalize;
@@ -409,35 +390,35 @@ form {
   padding: 0.2rem 0.5rem;
 }
 
-.recipe-pop-up .mealType{
+.recipe-pop-up .mealType {
   display: flex;
 }
 
-.recipe-pop-up .mealType p{
+.recipe-pop-up .mealType p {
   background-color: #000000;
   color: var(--hover-color);
   padding: 1rem;
   letter-spacing: 0.1rem;
 }
 
-.recipe-pop-up a{
-    font-family: var(--secondary-font);
-    color: var(--hover-color);
-    text-decoration: none;
-    background-color: #000000;
+.recipe-pop-up a {
+  font-family: var(--secondary-font);
+  color: var(--hover-color);
+  text-decoration: none;
+  background-color: #000000;
 }
 
 /* pagination */
 
-.list-and-pagination{
+.list-and-pagination {
   width: 95vw;
   margin: 0px auto;
   height: auto;
   margin-bottom: 10rem;
 }
 
-.paginationBtns{
-  color: #F1F3F8;
+.paginationBtns {
+  color: #f1f3f8;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -449,24 +430,23 @@ form {
   background-color: #232931;
 }
 
-.paginationBtns li{
+.paginationBtns li {
   letter-spacing: 0.1rem;
   border: none;
 }
 
-.paginationBtns li a{
-    cursor: pointer;
-    display: block;
-    padding: 0.75rem 1.2rem;
+.paginationBtns li a {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 1.2rem;
 }
 
-.paginationBtns li a:hover{
-  background-color: #F1F3F8;
+.paginationBtns li a:hover {
+  background-color: #f1f3f8;
   color: black;
 }
 
-.paginationActive a{
-    background-color: var(--hover-color);
-    color: black;
+.paginationActive a {
+  background-color: var(--hover-color);
+  color: black;
 }
-

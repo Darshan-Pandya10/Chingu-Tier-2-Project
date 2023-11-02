@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import RecipeCard from "./RecipeCard";
+import React, { useState } from 'react';
+import RecipeCard from './RecipeCard';
 import { v4 as uuidv4 } from 'uuid';
-import RecipePopUp from "./RecipePopUp";
+import RecipePopUp from './RecipePopUp';
 import './App.css';
 import ReactPaginate from 'react-paginate';
 
@@ -29,44 +29,47 @@ function RecipeList({ data, selectedValue }) {
 
   const changePage = ({ selected }) => {
     setPageNumber(selected);
-  }
+  };
 
   // Sorting logic
-  const filterRecipeList = selectedValue !== ''
-    ? hits.filter(recipe => recipe.recipe.mealType[0] === selectedValue)
-    : hits;
+  const filterRecipeList =
+    selectedValue !== ''
+      ? hits.filter((recipe) => recipe.recipe.mealType[0] === selectedValue)
+      : hits;
 
-  const displayRecipes = filterRecipeList.slice(pagesVisited, pagesVisited + recipesPerPage);
+  const displayRecipes = filterRecipeList.slice(
+    pagesVisited,
+    pagesVisited + recipesPerPage,
+  );
 
   return (
     <div className="list-and-pagination">
       <div className="recipe-list  w-[85vw] flex flex-wrap items-center justify-around h-auto my-8 mx-auto pt-4">
-
-          {displayRecipes.length > 0 ? (
-        displayRecipes.map(eachRecipeObj => {
-          const id = uuidv4();
-          const { recipe } = eachRecipeObj;
-          return (
-            <RecipeCard
-              recipe={recipe}
-              key={id}
-              id={id}
-              getRecipe={getRecipe}
-              closeRecipePopUp={closeRecipePopUp}
-            />
-          );
-        })
+        {displayRecipes.length > 0 ? (
+          displayRecipes.map((eachRecipeObj) => {
+            const id = uuidv4();
+            const { recipe } = eachRecipeObj;
+            return (
+              <RecipeCard
+                recipe={recipe}
+                key={id}
+                id={id}
+                getRecipe={getRecipe}
+                closeRecipePopUp={closeRecipePopUp}
+              />
+            );
+          })
         ) : (
           <div className="recipe-list">
-            <h3 className="error text-lg tracking-widest">Recipes not Found.</h3>
+            <h3 className="error text-lg tracking-widest">
+              Recipes not Found.
+            </h3>
           </div>
         )}
 
-
-        {isPopUpVisible && <RecipePopUp
-          data={popUpData}
-          closeRecipePopUp={closeRecipePopUp}
-        />}
+        {isPopUpVisible && (
+          <RecipePopUp data={popUpData} closeRecipePopUp={closeRecipePopUp} />
+        )}
       </div>
       <div className="pagination">
         <ReactPaginate
