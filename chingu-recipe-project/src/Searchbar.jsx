@@ -43,6 +43,12 @@ function Searchbar() {
         }
     }
 
+    function cleanUpFunc(){
+        setIngredient(''),
+        setDataLength(0),
+         setSearchClicked(false)
+    }
+
      useEffect(() => {
       if(!isMounted.current){
         isMounted.current = true
@@ -50,11 +56,7 @@ function Searchbar() {
       }
 
         fetchData()
-        return (
-          setIngredient(''),
-          setDataLength(0),
-         setSearchClicked(false)
-         )
+        return cleanUpFunc()
         },[searchClicked])
 
     function handleSearch(e){

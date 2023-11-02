@@ -42,7 +42,7 @@
 .navbar{
   color: var(--primary-color);
   position: relative;
-  padding-top: 1rem;
+  padding: 1rem;
   padding-right: 0rem;
 }
 
